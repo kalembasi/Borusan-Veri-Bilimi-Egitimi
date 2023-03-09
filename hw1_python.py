@@ -2,6 +2,11 @@
 # Denklemi python dilinde kurunuz ve çıktıyı print ediniz.
 print(3*(5+3+3)-3) #babanın bugünkü yaşı
 
+k_cocuk = int #kücük cocugun yasi
+b_cocuk = int #büyük cocugun yasi
+baba = int #babanin yasi
+
+
 
 # 2-
 Metin ="Veri bilimi, verilerden değer elde etmek için istatistik, bilimsel yöntemler, yapay zeka (AI) ve veri analizi dahil olmak üzere birçok " \

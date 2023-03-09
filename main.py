@@ -130,3 +130,136 @@ a is b #checks type and value
 
 #in, not in
 
+#functions
+
+print("malik", "kalembasi")
+print("malik", "kalembasi", sep="-") #sep, end, flush
+
+
+def borusan(a, b):
+    return print(a + b)
+
+
+toplam = borusan(2 ,3)
+
+
+def borusan2(a, b):
+    return a+b, a*b
+
+toplam, çarpım = borusan2(3, 5)
+
+
+def üsal(a, b=2): #b yi vermezse 2 yi kullanır
+    return a**b
+
+üsal(2)
+
+#global tanımlanan variable fonk içinde cagrılabilir
+
+def carpim(a):
+    global yeni_eleman
+    yeni_eleman = 5
+    return a*5
+
+carpim(6)
+
+yeni_eleman    #fonk içinde global tanımlanırsa fonk dısında cagrılabilir
+
+from helper import * # seçili fonk getirir
+import helper #tüm fonk getirir
+
+helper.carpim(5)
+
+students = ["malik", "feyza", "busra", "tuna"]
+enumerate(students)
+new_students = []
+for i,y in enumerate(students):
+    if i % 2 == 0:
+        new_students.append(y.upper())
+    else:
+        new_students.append((y.lower()))
+
+
+students = ["malik", "feyza", "busra", "tuna"]
+counter = 1
+
+number = int(input("give me a number: "))
+for i in range(1, number + 1):
+    counter *= i
+    print(counter)
+
+
+liste = list(range(0,100))
+
+for i in range(1, 11):
+    print(liste[-i])
+
+
+salaries =[1000, 2000, 2500, 3000, 4500, 5000]
+
+for i in salaries:
+    if i == 3000:
+        print("break")
+        break
+    print(i)
+
+
+salaries =[1000, 2000, 2500, 3000, 4500, 5000]
+
+for i in salaries:
+    if i == 3000:
+        print("continue 3000")
+        continue #skips next index
+    print(i)
+
+x = 1
+while x < 10:
+    print("borusan")
+    x += 1
+
+import random
+
+number = int(input("kac defa?: "))
+sozluk = {}
+
+for i in range(number):
+    x = random.randint(1,6)
+    while x == 6:
+        x = random.randint(1,6)
+    sozluk[i] = x
+
+
+sozluk = {}
+
+num = int(input("sayi?: "))
+for i in range(num+1):
+    sozluk[i] = i**2
+
+
+#built-in function : zip
+#f-string
+#lambda
+#map
+#filter
+#reduce
+
+from functools import reduce
+
+
+#numpy
+
+import numpy as np
+
+np.info
+a = np.array([1,2,3,4])
+b = np.array([2,3,4,5])
+
+a*b
+
+np.zeros(10, dtype = int)
+
+np.arange(0,10)
+
+np.linspace(0,50,11)
+
+np.random.normal(10, 4, (3,4))
