@@ -263,3 +263,44 @@ np.arange(0,10)
 np.linspace(0,50,11)
 
 np.random.normal(10, 4, (3,4))
+
+#pandas
+
+import pandas as pd
+
+seri = pd.Series([20, 88, 4, 5, 6])
+
+seri.values
+
+seri.head()
+
+seri.ndim
+
+seri.tail()
+
+sozluk = {"reg": 18, "log": 11, "cart": 12}
+
+seri2 = pd.Series(sozluk)
+
+pd.concat([seri, seri2], ignore_index=True) #aynı indexe sahip birden fazla veri almaz, ignore index False olurse alır
+
+import numpy as np
+
+l = [1,2,3,4,5]
+l
+
+pd.DataFrame(l, columns= ["degisken_ismi"])
+
+m =np.arange(1,10).reshape((3,3))
+m
+
+df=pd.DataFrame(m, columns=["var1", "var2", "var3"])
+
+df.head()
+
+df["var4"] = df["var1"] + df["var3"]
+
+import openpyxl
+
+df.to_excel("borusan.xlsx") #send to excel
+
